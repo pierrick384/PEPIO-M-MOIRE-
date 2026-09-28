@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pépio Mémoire — Entretien et nettoyage de tombes</title>
+<meta name="description" content="Pépio Mémoire — entretien, nettoyage et fleurissement de tombes. Un service soigné et respectueux.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+:root{--green:#0b4b38;--green2:#17664c;--light:#f4f1e5;--cream:#fbf9f0;--gold:#b69b52;--ink:#18382d;--line:#d9d8c9}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:"DM Sans",Arial,sans-serif}
+a{text-decoration:none;color:inherit}
+.wrap{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(251,249,240,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-mark{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;border:1.5px solid var(--gold);font-family:"Playfair Display",serif;font-size:25px;color:var(--green)}
+.brand-name{font-family:"Playfair Display",serif;font-size:24px;font-weight:600}
+nav{display:flex;gap:23px;font-size:14px;font-weight:600}
+nav a:hover{color:var(--green2)}
+.btn{display:inline-block;padding:13px 20px;border-radius:30px;background:var(--green);color:white;font-weight:700;border:1px solid var(--green)}
+.btn.light{background:transparent;color:var(--green);border-color:var(--green)}
+.hero{min-height:690px;display:grid;grid-template-columns:1.05fr .95fr;background:var(--light)}
+.hero-photo{min-height:690px;background:linear-gradient(0deg,rgba(11,75,56,.38),transparent 45%),url('https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=85') center/cover}
+.hero-content{padding:72px 7% 60px;display:flex;flex-direction:column;justify-content:center}
+.eyebrow{color:var(--green2);font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:800}
+h1{font-family:"Playfair Display",serif;font-size:clamp(44px,6vw,76px);line-height:1.02;margin:15px 0;color:var(--green)}
+.script{font-family:"Playfair Display",serif;font-style:italic;font-size:25px;line-height:1.35;color:var(--green2);max-width:560px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.trust{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);margin-top:40px;padding-top:22px;gap:15px}
+.trust div{text-align:center;font-size:13px;padding:0 8px}
+.trust strong{display:block;color:var(--green);font-size:18px;margin-bottom:3px}
+.section{padding:85px 0}
+.head{text-align:center;max-width:760px;margin:0 auto 45px}
+.head h2{font-family:"Playfair Display",serif;font-size:48px;color:var(--green);margin:0 0 12px}
+.head p{color:#607069;margin:0}
+.brush{display:inline-block;background:var(--green);color:#fff;padding:7px 24px 10px;border-radius:50% 45% 55% 40%;font-family:"Playfair Display",serif;font-style:italic;font-size:27px;transform:rotate(-1deg)}
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:#fffdf6;border:1px solid var(--line);border-radius:18px;padding:28px 22px;box-shadow:0 8px 30px rgba(29,55,43,.06)}
+.card .ico{font-size:34px}.card h3{font-family:"Playfair Display",serif;color:var(--green);font-size:23px;margin:12px 0 8px}.card p{font-size:14px;color:#66726c;margin:0}
+.prices{background:var(--green);color:white}
+.prices .head h2{color:white}.prices .head p{color:#d8e3dd}
+.price-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.price{display:flex;align-items:center;justify-content:space-between;gap:18px;background:#f8f5e9;color:var(--ink);border-radius:18px;padding:21px 24px;border:1px solid rgba(255,255,255,.35)}
+.price h3{margin:0;color:var(--green);font-size:18px}.price p{margin:3px 0 0;font-size:13px;color:#68736e}
+.amount{min-width:90px;text-align:center;background:var(--green);color:white;border-radius:30px;padding:12px 13px;font-size:20px;font-weight:800}
+.price.full{grid-column:span 2}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.about-photo{min-height:520px;border-radius:24px;background:url('https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?auto=format&fit=crop&w=1000&q=85') center/cover}
+.about h2{font-family:"Playfair Display",serif;color:var(--green);font-size:46px;line-height:1.1;margin:12px 0 18px}
+.points{display:grid;gap:12px;margin-top:25px}.point{display:flex;gap:12px;align-items:flex-start}.tick{width:27px;height:27px;border-radius:50%;background:#dfe9d8;color:var(--green);display:grid;place-items:center;font-weight:800;flex:none}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.step{text-align:center}.num{width:52px;height:52px;border-radius:50%;margin:0 auto 15px;background:var(--gold);color:white;display:grid;place-items:center;font-weight:800}.step h3{font-family:"Playfair Display",serif;color:var(--green);font-size:23px}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:18px}.result{position:relative;overflow:hidden;border-radius:18px;min-height:300px;background-size:cover;background-position:center}.before{background-image:url('https://images.unsplash.com/photo-1524230572899-a752b3835840?auto=format&fit=crop&w=900&q=85')}.after{background-image:url('https://images.unsplash.com/photo-1519491050282-cf00c82424b4?auto=format&fit=crop&w=900&q=85')}.label{position:absolute;bottom:15px;left:15px;background:var(--green);color:white;padding:8px 18px;border-radius:22px;font-weight:800}
+.contact{background:var(--light)}.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px}.contact h2{font-family:"Playfair Display",serif;font-size:50px;line-height:1.05;color:var(--green);margin:12px 0}.contact-info{font-size:17px;line-height:1.9}.contact-info strong{color:var(--green)}form{background:white;padding:30px;border-radius:20px;border:1px solid var(--line)}label{display:block;font-size:13px;font-weight:800;margin:11px 0 6px}input,select,textarea{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:10px;background:#fffdf8;font:inherit;color:var(--ink)}textarea{min-height:110px;resize:vertical}.submit{margin-top:15px;width:100%;cursor:pointer}
+footer{background:#073a2b;color:#dce6df;padding:34px 0}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px}
+@media(max-width:900px){nav{display:none}.hero{grid-template-columns:1fr}.hero-photo{min-height:420px;order:2}.hero-content{order:1;padding:60px 7%}.services{grid-template-columns:1fr 1fr}.about,.contact-grid{grid-template-columns:1fr}.price-grid{grid-template-columns:1fr}.price.full{grid-column:auto}.steps{grid-template-columns:1fr}}
+@media(max-width:560px){.nav{min-height:68px}.brand-name{font-size:20px}.brand-mark{width:42px;height:42px}.nav>.btn{display:none}.hero-photo{min-height:300px}.trust{grid-template-columns:1fr}.services{grid-template-columns:1fr}.section{padding:60px 0}.head h2{font-size:38px}.about h2,.contact h2{font-size:38px}.gallery{grid-template-columns:1fr}.result{min-height:230px}.price{align-items:flex-start}.amount{min-width:76px;font-size:17px}}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap nav">
+<a class="brand" href="#accueil"><span class="brand-mark">P</span><span class="brand-name">Pépio Mémoire</span></a>
+<nav><a href="#services">Prestations</a><a href="#tarifs">Tarifs</a><a href="#engagement">Notre engagement</a><a href="#resultats">Résultats</a><a href="#contact">Contact</a></nav>
+<a class="btn" href="#contact">Devis gratuit</a>
+</div>
+</header>
+
+<main>
+<section class="hero" id="accueil">
+<div class="hero-photo"></div>
+<div class="hero-content">
+<div class="eyebrow">Entretien & nettoyage de tombes</div>
+<h1>Pépio Mémoire</h1>
+<div class="script">Parce qu’ils méritent d’être toujours dans de bonnes mains…</div>
+<p>Un service soigné, discret et respectueux pour prendre soin des monuments de vos proches, même lorsque vous ne pouvez pas vous déplacer.</p>
+<div class="hero-actions"><a class="btn" href="#contact">Demander un devis</a><a class="btn light" href="#tarifs">Voir les tarifs</a></div>
+<div class="trust"><div><strong>✓</strong>Service soigné</div><div><strong>♡</strong>Respect de la mémoire</div><div><strong>📷</strong>Photos avant/après</div></div>
+</div>
+</section>
+
+<section class="section" id="services">
+<div class="wrap">
+<div class="head"><span class="brush">Mes prestations</span><p style="margin-top:20px">Des prestations simples et transparentes pour entretenir et fleurir les sépultures avec attention.</p></div>
+<div class="services">
+<div class="card"><div class="ico">🪦</div><h3>Nettoyage simple</h3><p>Pierre tombale, plaque et inscriptions.</p></div>
+<div class="card"><div class="ico">✨</div><h3>Nettoyage complet</h3><p>Pierre, entourage et désherbage.</p></div>
+<div class="card"><div class="ico">🌷</div><h3>Nettoyage + fleurissement</h3><p>Nettoyage de la tombe et composition florale.</p></div>
+<div class="card"><div class="ico">🌿</div><h3>Fleurissement</h3><p>Composition florale fraîche adaptée selon la saison.</p></div>
+</div>
+</div>
+</section>
+
+<section class="section prices" id="tarifs">
+<div class="wrap">
+<div class="head"><span class="brush">Grille tarifaire</span><p style="margin-top:22px">Des prix clairs et transparents</p></div>
+<div class="price-grid">
+<div class="price"><div><h3>Nettoyage simple</h3><p>Pierre tombale, plaque, inscriptions</p></div><div class="amount">80 €</div></div>
+<div class="price"><div><h3>Nettoyage complet</h3><p>Pierre + entourage + désherbage</p></div><div class="amount">110 €</div></div>
+<div class="price"><div><h3>Nettoyage simple + fleurissement</h3><p>Nettoyage de la tombe + composition florale</p></div><div class="amount">85 €</div></div>
+<div class="price"><div><h3>Fleurissement</h3><p>Composition florale fraîche selon la saison</p></div><div class="amount">20 €</div></div>
+<div class="price"><div><h3>Forfait annuel</h3><p>4 passages</p></div><div class="amount">320 €</div></div>
+<div class="price"><div><h3>Déplacement</h3><p>Aller-retour</p></div><div class="amount">1 €/km</div></div>
+<div class="price full"><div><h3>À savoir</h3><p>Les tarifs sont indicatifs et peuvent varier selon la taille et l’état de la tombe, les produits utilisés, les fleurs et la distance.</p></div></div>
+</div>
+</div>
+</section>
+
+<section class="section" id="engagement">
+<div class="wrap about">
+<div class="about-photo"></div>
+<div>
+<div class="eyebrow">Notre engagement</div>
+<h2>Un service de confiance</h2>
+<p>Parce que l’entretien d’une sépulture touche à l’intime, Pépio Mémoire privilégie la discrétion, l’écoute et le travail soigné.</p>
+<div class="points">
+<div class="point"><span class="tick">✓</span><span>Intervention régulière ou ponctuelle</span></div>
+<div class="point"><span class="tick">✓</span><span>Compte-rendu et photos envoyés à la famille</span></div>
+<div class="point"><span class="tick">✓</span><span>Devis personnalisé avant intervention</span></div>
+<div class="point"><span class="tick">✓</span><span>Disponible et à l’écoute de vos demandes</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section" style="background:#fffdf6">
+<div class="wrap">
+<div class="head"><span class="brush">Comment ça marche ?</span></div>
+<div class="steps">
+<div class="step"><div class="num">1</div><h3>Contactez-moi</h3><p>Indiquez le cimetière, la commune et la prestation souhaitée.</p></div>
+<div class="step"><div class="num">2</div><h3>Devis personnalisé</h3><p>Je vous confirme la prestation et le tarif avant intervention.</p></div>
+<div class="step"><div class="num">3</div><h3>Intervention</h3><p>La tombe est entretenue avec soin et vous recevez les photos si demandé.</p></div>
+</div>
+</div>
+</section>
+
+<section class="section" id="resultats">
+<div class="wrap">
+<div class="head"><span class="brush">Nos résultats</span><p style="margin-top:22px">Ajoute ici tes vraies photos avant/après au fur et à mesure de tes interventions.</p></div>
+<div class="gallery"><div class="result before"><span class="label">Avant</span></div><div class="result after"><span class="label">Après</span></div></div>
+<p style="text-align:center;font-family:'Playfair Display',serif;font-style:italic;font-size:25px;color:var(--green);margin-top:28px">Ensemble, préservons leur souvenir… ♡</p>
+</div>
+</section>
+
+<section class="section contact" id="contact">
+<div class="wrap contact-grid">
+<div>
+<div class="eyebrow">Pépio Mémoire</div>
+<h2>Contactez-moi</h2>
+<p>Pour un devis personnalisé ou toute question concernant l’entretien d’une sépulture.</p>
+<div class="contact-info">
+<div><strong>📞 Téléphone</strong><br>06 38 16 29 38</div>
+<div><strong>✉️ E-mail</strong><br>contact.pepiomemoire@gmail.com</div>
+<div><strong>📍 Zone d’intervention</strong><br>À préciser</div>
+</div>
+</div>
+<form onsubmit="event.preventDefault();alert('Merci ! Le formulaire pourra être relié à votre adresse e-mail dans la version mise en ligne.');">
+<h3 style="font-family:'Playfair Display',serif;font-size:28px;color:var(--green);margin-top:0">Demande de devis</h3>
+<label>Nom et prénom</label><input required placeholder="Votre nom">
+<label>Téléphone</label><input required placeholder="06 XX XX XX XX">
+<label>E-mail</label><input type="email" placeholder="vous@email.fr">
+<label>Prestation</label><select><option>Nettoyage simple — 80 €</option><option>Nettoyage complet — 110 €</option><option>Nettoyage + fleurissement — 85 €</option><option>Fleurissement — 20 €</option><option>Forfait annuel — 320 €</option><option>Autre demande</option></select>
+<label>Message</label><textarea placeholder="Commune, cimetière, type de tombe, demande particulière..."></textarea>
+<button class="btn submit" type="submit">Envoyer ma demande</button>
+</form>
+</div>
+</section>
+</main>
+
+<footer><div class="wrap foot"><span>© 2026 Pépio Mémoire — Entretien et nettoyage de tombes</span><span>Mentions légales · Politique de confidentialité</span></div></footer>
+</body>
+</html>
